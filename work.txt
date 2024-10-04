@@ -1,0 +1,108 @@
+function main(str) {
+    let vowels = "aeiouAEIOU"
+
+    let cnt = 0
+
+    for (let i = 0; i<str.length; i++)
+    {
+        if (vowels.includes(str[i]))
+        {
+            cnt +=1 
+        }
+    }
+
+    console.log(cnt)
+
+}
+
+
+function findMaxValue(arr) {
+  // Write your code here
+  // return the result
+
+  let max = arr[0]
+
+  for (let i = 1; i<arr.length ; i++)
+  {
+      if (arr[i]>max)
+      {
+          max  = arr[i]
+      }
+  }
+
+  console.log(max)
+
+}
+
+
+function isPalindrome(str) {
+  // Write your code here
+  // return the result
+    let lc = str.toLowerCase()
+    let arr = []
+    for (let i in lc)
+    {
+        if ((lc.charCodeAt(i)>=97 && lc.charCodeAt(i)<=122) || (lc.charCodeAt(i)>=65 && lc.charCodeAt(i)<=90))
+        {
+            arr.push(lc[i])
+        }
+    }
+    let start = 0;
+    let end = arr.length-1;
+    let ans = true;
+    while(start < end)
+    {
+        if (arr[start]!=arr[end])
+        {
+            ans = false
+            break;
+        }
+        start++
+        end--
+    }
+    if (ans == true)
+    {
+        console.log(true)
+    }
+    else 
+    {
+        console.log(false)
+    }
+
+}
+
+
+function sumOfArray(arr) {
+  // Write your code here
+  // return the result
+  let sum = 0
+
+  for (let i = 0; i<arr.length; i++ )
+  {
+      sum += arr[i]
+  }
+
+  console.log(sum)
+
+}
+
+
+function findLongestWord(str) {
+  // Write your code here
+  // return the result
+
+    let arr = str.split(" ")
+    let max = (arr[0].length)
+    let maxWord= arr[0]
+    for (let i = 1; i<arr.length; i++)
+    {
+        if((arr[i]).length>max)
+        {
+            max = arr[i].length
+            maxWord=arr[i]
+        }
+    }
+
+    console.log(maxWord)
+
+}
